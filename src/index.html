@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FirebaseProject</title>
+  <link rel="stylesheet" href="styles.css"></head>
+</head>
+<body>
+  <section class="landing">
+    <div class="title">
+      <h1>Welcome to FirebaseProject</h1>
+      <p>Please login or create an account to continue.</p>
+    </div>
+    <div class="auth">
+      <div id="login" class="auth-container">
+        <h2 class="auth-heading">Login</h2>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="login-email" name="email" class="auth-input" required>
+          <br>
+          <label for="password">Password:</label>
+          <input type="password" id="login-password" name="password" class="auth-input" required>
+          <br>
+          <button id="login-button" type="submit" class="auth-button" onclick="login()">Login</button>
+          <p id="login-error" class="auth-error"></p>
+        </div>
+        <div class="auth-change">No account? <span onclick="loginOrSignup()">Create one</span></div>
+      </div>
+      <div id="signup" class="auth-container hidden">
+        <h2 class="auth-heading">Create Account</h2>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="create-email" name="email" class="auth-input" required>
+          <br>
+          <label for="password">Password:</label>
+          <input type="password" id="create-password" name="password" class="auth-input" required>
+          <br>
+          <label for="confirm-password">Confirm Password:</label>
+          <input type="password" id="create-confirm" name="confirm-password" class="auth-input" required>
+          <button id="create-account-button" type="submit" class="auth-button" onclick="createAccount()">Create Account</button>
+          <p id="create-error" class="auth-error"></p>
+        </div>
+        <div class="auth-change">Already have an account? <span onclick="loginOrSignup()">Login Instead</span></div>
+      </div>
+    </div>
+  </section>
+  <script src="../dist/bundle.js"></script>
+</body>
+</html>

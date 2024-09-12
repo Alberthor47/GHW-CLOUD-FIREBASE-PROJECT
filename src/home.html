@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FirebaseProject</title>
+  <link rel="stylesheet" href="styles.css"></head>
+</head>
+<body>
+  <header class="header">
+    <nav>
+      <ul>
+        <li id="user-name">User name</li>
+        <li onclick="signOut()">Sign Out</li>
+      </ul>
+    </nav>
+  </header>
+  <section class="todo-wrapper">
+    <div class="todo-container">
+      <div class="todo-title">
+        <div>
+          <label for="task">What you want to remember?</label>
+          <textarea type="text" id="task-input" name="task"></textarea>
+          <p id="task-error" class="auth-error"></p>
+          <br>
+        </div>
+        <button id="todo-button" onclick="addListItem()">Add item to list</button>
+      </div>
+      <div id="todo-list" class="todo-list"></div>
+    </div>
+  </section>
+  <script src="../dist/bundle.js"></script>
+</body>
+</html>
